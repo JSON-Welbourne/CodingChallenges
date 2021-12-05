@@ -1,0 +1,29 @@
+
+
+"""class Node:
+    def __init__(self, freq,data):
+        self.freq= freq
+        self.data=data
+        self.left = None
+        self.right = None
+"""        
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def decodeHuff(root, s):
+    #Enter Your Code Here
+    currentNode = root
+    output = ""
+    i = 0
+    while i < len(s):
+        while currentNode.data == '\x00' and currentNode != None:
+            if s[i] == '1':
+                i += 1
+                currentNode = currentNode.right
+            else:
+                i += 1
+                currentNode = currentNode.left    
+        if currentNode != None:
+            output += currentNode.data
+        currentNode = root
+    print(output)
+
