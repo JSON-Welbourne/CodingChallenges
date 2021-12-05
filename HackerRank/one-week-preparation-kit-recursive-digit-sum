@@ -1,7 +1,4 @@
 #!/bin/python3
-
-import math
-
 # https://www.hackerrank.com/challenges/one-week-preparation-kit-recursive-digit-sum/problem
 import os
 import random
