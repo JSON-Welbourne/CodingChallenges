@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = input()
+try:
+    n = int(n)
+except:
+    exit()
+for j in range(n):    
+    s = input()
+    print("{} {}".format(
+        "".join([s[i] for i in range(len(s)) if i % 2 == 0]),
+        "".join([s[i] for i in range(len(s)) if i % 2 == 1])))
+    
