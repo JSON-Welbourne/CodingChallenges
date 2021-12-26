@@ -1,0 +1,24 @@
+import sys
+
+class Solution:
+    theStack = ""
+    theQueue = ""
+    
+    def pushCharacter(self,ch):
+        self.theStack = self.theStack + ch
+        
+    def enqueueCharacter(self,ch):
+        self.theQueue = self.theQueue + ch
+        
+    def popCharacter(self):
+        ch = self.theStack[0]
+        theStack = self.theStack[1:]
+        return ch
+    
+    def dequeueCharacter(self):
+        ch = self.theQueue[-1]
+        theQueue = self.theQueue[:-1]
+        return ch
+    # Write your code here
+
+# read the string s
