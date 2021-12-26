@@ -1,0 +1,30 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+
+    arr = []
+
+    for _ in range(6):
+        arr.append(list(map(int, input().rstrip().split())))
+    maskArr = [[1,1,1],[0,1,0],[1,1,1]]
+    maxSum = None
+    for i in range(len(arr) - len(maskArr) + 1):
+        for j in range(len(arr[0]) - len(maskArr[0]) + 1):
+            theSum = 0
+            for k in range(len(maskArr)):
+                for l in range(len(maskArr[0])):
+                    theSum += arr[i+k][j+l] * maskArr[k][l]
+            if maxSum == None:
+                maxSum = theSum
+            else:
+                if theSum > maxSum:
+                    maxSum = theSum
+    print(maxSum)
